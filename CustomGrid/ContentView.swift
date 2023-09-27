@@ -46,7 +46,7 @@ struct MyGridView: View{
 struct CustomGridView: View {
 
     @EnvironmentObject var someData: SomeData
-    @State private var searchedText = ""
+    @State private var searchedText = "One"
     private var filteredData: [CustomGridData] {
         return searchedText == "" ? someData.data : someData.data.filter { $0.title.contains(searchedText) }
     }
